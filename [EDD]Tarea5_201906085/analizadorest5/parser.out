@@ -1,0 +1,231 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ID
+    TCARNET
+    TDESCRIPCION
+    TDIA
+    TESTADO
+    TFECHA
+    THORA
+    TMATERIA
+    TMES
+    TNOMBRE
+
+Grammar
+
+Rule 0     S' -> statement
+Rule 1     statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+Rule 2     dato -> NORMSTRING
+Rule 3     dato -> NUMBER
+
+Terminals, with rules where they appear
+
+COMA                 : 1 1 1 1 1 1 1 1
+ID                   : 
+NORMSTRING           : 2
+NUMBER               : 3
+TCARNET              : 
+TDESCRIPCION         : 
+TDIA                 : 
+TESTADO              : 
+TFECHA               : 
+THORA                : 
+TMATERIA             : 
+TMES                 : 
+TNOMBRE              : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+dato                 : 1 1 1 1 1 1 1 1 1
+statement            : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . statement
+    (1) statement -> . dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    statement                      shift and go to state 1
+    dato                           shift and go to state 2
+
+state 1
+
+    (0) S' -> statement .
+
+
+
+state 2
+
+    (1) statement -> dato . COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 5
+
+
+state 3
+
+    (2) dato -> NORMSTRING .
+
+    COMA            reduce using rule 2 (dato -> NORMSTRING .)
+    $end            reduce using rule 2 (dato -> NORMSTRING .)
+
+
+state 4
+
+    (3) dato -> NUMBER .
+
+    COMA            reduce using rule 3 (dato -> NUMBER .)
+    $end            reduce using rule 3 (dato -> NUMBER .)
+
+
+state 5
+
+    (1) statement -> dato COMA . dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 6
+
+state 6
+
+    (1) statement -> dato COMA dato . COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 7
+
+
+state 7
+
+    (1) statement -> dato COMA dato COMA . dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 8
+
+state 8
+
+    (1) statement -> dato COMA dato COMA dato . COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 9
+
+
+state 9
+
+    (1) statement -> dato COMA dato COMA dato COMA . dato COMA dato COMA dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 10
+
+state 10
+
+    (1) statement -> dato COMA dato COMA dato COMA dato . COMA dato COMA dato COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 11
+
+
+state 11
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA . dato COMA dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 12
+
+state 12
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato . COMA dato COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 13
+
+
+state 13
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA . dato COMA dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 14
+
+state 14
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato . COMA dato COMA dato COMA dato
+
+    COMA            shift and go to state 15
+
+
+state 15
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA . dato COMA dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 16
+
+state 16
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato . COMA dato COMA dato
+
+    COMA            shift and go to state 17
+
+
+state 17
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA . dato COMA dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 18
+
+state 18
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato . COMA dato
+
+    COMA            shift and go to state 19
+
+
+state 19
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA . dato
+    (2) dato -> . NORMSTRING
+    (3) dato -> . NUMBER
+
+    NORMSTRING      shift and go to state 3
+    NUMBER          shift and go to state 4
+
+    dato                           shift and go to state 20
+
+state 20
+
+    (1) statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato .
+
+    $end            reduce using rule 1 (statement -> dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato COMA dato .)
+
